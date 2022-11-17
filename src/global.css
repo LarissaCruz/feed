@@ -1,0 +1,14 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    outline: 0px;
+    box-sizing: border-box;
+
+
+}
+
+body{
+    background: #fafafa;
+    font: 14px Arial, Helvetica, sams-serif;
+    -webkit-font-smooting: antialiased !important;
+}
