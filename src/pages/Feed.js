@@ -10,14 +10,14 @@ function Feed() {
   const [feed, setFeed] = useState([]);
   useEffect(() => {
     //Chamadas em tempo real via Socket
-    registerToSocket();
+    //registerToSocket();
     requestPost();
   }, [feed]);
 
   const requestPost = async () => {
-    const response = await api.get("posts");
+    const response = await api.get("publi");
     //atualiza o response quando muda a variável feed
-    setFeed(response.data);
+    setFeed(response.data.publis);
   };
 
   const registerToSocket = () => {
@@ -41,7 +41,7 @@ function Feed() {
             <p>07/08/2022</p>
           </header>
 
-          <img src={`http://localhost:3333/files/${post.image}`} alt="" />
+          <img src={`http://localhost:3333/files/${post.publiImage}`} alt="" />
 
           <footer>
             <p>
